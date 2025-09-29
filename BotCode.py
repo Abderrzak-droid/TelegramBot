@@ -57,7 +57,6 @@ def check_news():
                     except Exception as e:
                         print("Failed to send:", e)
 
-if name == "main":
-    while True:
-        check_news()
-        time.sleep(300)  # Check every 5 minutes
+while True:
+    check_news()
+    time.sleep(300)  # Check every 5 minutes
