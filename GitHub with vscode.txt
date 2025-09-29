@@ -1,0 +1,24 @@
+GitHub with vscode: 
+	Navigate to the local project directory and create a local git repository:
+
+		--git init--
+
+	Once that is successful, click on the 'Source Control' icon on the left navbar in VS-Code.One should be able to see files ready to be commit-ed. Press on 'Commit' button, provide comments, stage the changes and commit the files. Alternatively you can run from CLI
+
+		--git commit -am "Your comment"--
+
+	Now you need to visit your GitHub account and create a new Repository. Exclude creating 'README.md', '.gitIgnore' files. Also do not add any License to the repo. Sometimes these settings cause issue while pushing in.
+
+	Copy the link to this newly created GitHub Repository.
+
+	Come back to the terminal in VS-CODE and type these commands in succession:
+
+		--git remote add origin <Link to GitHub Repo> //maps the remote repo link to local git repo
+
+		--git remote -v //this is to verify the link to the remote repo
+
+		--git push -u origin master // pushes the commit-ed changes into the remote repo
+
+Note: If it is the first time the local git account is trying to connect to GitHub, you may be required to enter credentials to GitHub in a separate window.
+
+	You can see the success message in the Terminal. You can also verify by refreshing the GitHub repo online.
